@@ -138,7 +138,9 @@ void loop(){
       uid+=String(rfid.uid.uidByte[i],HEX);
     }
     uid.toUpperCase();
-
+    Serial.print("Card UID is ");
+    Serial.println(uid);
+    
     if(uid=="6127463"){
       openDoor();
     }
